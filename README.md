@@ -5,6 +5,7 @@ Name: Yuming Su
 ## Overview.
 
 To test this app if can run the all functions correctly,e.g. get all imitations,delete an imitation.
+github http: https://github.com/YumingSu/Cloudyserver
 
 ## API endpoints.
 
