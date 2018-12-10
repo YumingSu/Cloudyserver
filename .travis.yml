@@ -2,3 +2,12 @@ dist: trusty
 language: node_js
 node_js:
 - stable
+branches:
+  only: development
+notifications:
+  email:
+    recipients:
+    877385836@qq.com      # change to your own address
+    20082247@mail.wit.ie    # uae other (optional)
+    on_success: never        # default: change
+    on_failure: always       # default: always
