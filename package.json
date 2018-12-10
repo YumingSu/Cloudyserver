@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "test": "cross-env NODE_ENV=test mocha test/routes/imitations-test.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
