@@ -2,6 +2,8 @@
   "name": "tideapp",
   "version": "0.0.0",
   "private": true,
+  "scripts": {
+  },
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
@@ -37,20 +39,5 @@
     "url-loader": "^0.5.8",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^2.9.1"
-  },
-  "scripts": {
-    "publish-coverage": "nyc report --reporter=text-lcov | coveralls",
-    "coverage": "cross-env NODE_ENV=test PORT=4000 nyc mocha test/routes/products-test.js",
-    "test": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/imitations-test.js",
-    "postbuild": "npm run server",
-    "prebuild": "npm-run-all test clean",
-    "build": "babel ./ --out-dir lib/ --ignore ./node_modules,./.babelrc,./package.json,./package-lock.json,./test --copy-files",
-    "server": "cross-env NODE_ENV=dev PORT=3001 node lib/bin/www",
-    "start": "npm-run-all test build server",
-    "clean": "rimraf ./lib && mkdir lib",
-    "server:watch": "cross-env NODE_ENV=dev nodemon --exec babel-node bin/www",
-    "test:watch": "npm run test -- --watch",
-    "lint": "esw  ./test ./routes ./models/ app.js",
-    "lint:watch": "npm run lint -- --watch"
   }
 }
